@@ -3,8 +3,6 @@ stage('SCM Checkout'){
 git branch: 'main', url: 'https://github.com/yuvarakshana-sukumar/EMS_private.git'
 }
    stage ('Build') {
-	steps {
 		sh './gradlew build'
-	}
  }
 }
