@@ -1,5 +1,6 @@
 node{
-    withGradle {
-        sh './gradlew build'
+    stage('Build') {
+        def gradleHome = tool name: 'GRADLE_HOME', type: 'gradle'
+        sh "${gradleHome} build"
     }
 }
